@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Airline Booking System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Airline Booking System</h1>
+    </header>
+
+    <main>
+      <section class="search">
+        <h2>Search Flights</h2>
+        <form id="search-form">
+          <label>
+            From (IATA):
+            <input type="text" id="from" maxlength="3" placeholder="JFK" required />
+          </label>
+          <label>
+            To (IATA):
+            <input type="text" id="to" maxlength="3" placeholder="LHR" required />
+          </label>
+          <label>
+            Date:
+            <input type="date" id="date" required />
+          </label>
+          <button type="submit">Search</button>
+        </form>
+        <div id="results"></div>
+      </section>
+
+      <section class="booking">
+        <h2>Book Flight</h2>
+        <form id="booking-form">
+          <input type="hidden" id="flightId" />
+          <div class="selected-flight" id="selected-flight"></div>
+          <label>
+            Name:
+            <input type="text" id="name" required />
+          </label>
+          <label>
+            Email:
+            <input type="email" id="email" required />
+          </label>
+          <label>
+            Seats:
+            <input type="number" id="seats" value="1" min="1" required />
+          </label>
+          <button type="submit" disabled id="book-btn">Confirm Booking</button>
+        </form>
+        <div id="booking-result"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
